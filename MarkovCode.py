@@ -107,7 +107,7 @@ def Rpivot(p, q, Mb):
     j = q
     # Iterate through the columns of Mb to find its first nonzero column.
     for y in range(q, n):
-        if [abs(Mb[x][y]) for x in range(p, m)] == [0] * (m - p):
+        if [Mb[x][y] for x in range(p, m)] == [0] * (m - p):
             j = j + 1
         else:
             break
