@@ -38,7 +38,7 @@ def mult(M1, M2):
         print ("Matrix Multiplication Dimension Error:", c1, ",", r2)
         return
     # X will be the r1 x c2 output matrix.
-    X = [[0 for i in range(c2)] for i in range(r1)]
+    X = [[0 for q in range(c2)] for p in range(r1)]
     # Entry X(i,j) is the dot product of row i (M1) and column j (M2).
     for i in range(r1):
         for j in range(c2):
