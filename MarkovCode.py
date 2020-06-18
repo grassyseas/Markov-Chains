@@ -178,7 +178,8 @@ def gauss(M, b, d=1e-14):
 def meanTime(T, d=1e-14):
     """
     The input T should be an n x n transition matrix. The output will give
-    the mean times of each state to the state associated with the bottom row.
+    the mean hitting time of each state to the state associated with the 
+    bottom row.
     """
     m = len(T)
     n = len(T[0])
@@ -194,6 +195,12 @@ def meanTime(T, d=1e-14):
 
 def hpTrans(Dvals, Dprobs, Rvals, Rprobs, H, printHPvals="off"):
     """
+    This function transforms information about a video game battle
+    into a transition matrix output. In the battle the aggressor
+    randomly deals different damage values to the character, whom
+    randomly heals different amounts. This continues in a back and
+    forth manner, where the character stays at zero hp once they
+    reach it and cannot exceed their maximum hp named H.
     Dvals is the list of possible damage values that can be inflicted.
     Dprobs is the corresponding list of probabilities that each damage value
     has of being inflicted per roll.
