@@ -63,6 +63,12 @@ def power(M, k):
     return Mnew
 
 def rinse(M, d=1e-14):
+    """
+    This function removes any entries in a list or array that 
+    are closer to than d is. It is used in the gauss function
+    to avoid division by near-zero values. By default d is set
+    to be equal to 10^-14.
+    """
     m = len(M)
     if type(M[0]) == list:
         n = len(M[0])
