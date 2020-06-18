@@ -128,7 +128,7 @@ def elim(i, M):
     """
     m = len(M)
     n = len(M[0])
-    # j is the pivot entry in row i.
+    # j is the column index of the pivot in row i.
     j = pivotindex(M[i])
     
     # This condition prevents out of bounds errors.
