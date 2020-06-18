@@ -12,7 +12,7 @@ def scale(r, M):
     """
     Scales each entry in M by the scalar r.
     """
-    return [[r * M[p][q] for p in range(len(M))] for q in range(len(M))]
+    return [[r * M[p][q] for q in range(len(M[0]))] for p in range(len(M))]
 
 def add(M1, M2):
     """
