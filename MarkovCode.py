@@ -56,6 +56,10 @@ def mult2(M1, M2):
 def power(M, k):
     """
     Given a matrix M, it returns M^k.
+    If M is a transition matrix, then the (i,j)-th entry of M^k is
+    the probability that state i will reach state j in exactly k steps.
+    If state j is an absorbing state, then the (i,j)-th entry is the
+    probability that state i will reach state j within k steps.
     """
     Mnew = [M[x] for x in range(len(M))]
     for i in range(k):
