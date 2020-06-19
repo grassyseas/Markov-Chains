@@ -177,6 +177,7 @@ def gauss(M, b, d=1e-14):
         # column b, then normalize the row so that its pivot entry is one.
         if y <= n:
             M[x] = [M[x][s] / M[x][y] for s in range(n+1)]
+        M, b = rinse(M, d), rinse(b, d)
     return M
 
 def meanTime(T, d=1e-14):
